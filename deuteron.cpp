@@ -128,14 +128,14 @@ int main() {
 
     cout << "Analytic alpha: " << alpha_analytic << "\n";
 
-    ofstream outputFile("wavefunction.txt");
-    double normalization_constant = normalize_wavefunction(optimal_alpha);
-    for (double r = c; r < b + c + 10.0; r += 0.1) {
-        double psi_mc = 2.0 * pow(optimal_alpha, 1.5) * trial_wavefunction(r, optimal_alpha);
-        double psi_analytic = (r < b + c) ? A * sin(k_analytic * (r - c)) : B * exp(-alpha_analytic * r);
-        outputFile << r << " " << psi_mc << " " << psi_analytic << "\n";
-    }
-    outputFile.close();
+    // ofstream outputFile("wavefunction.txt");
+    // double normalization_constant = normalize_wavefunction(optimal_alpha);
+    // for (double r = c; r < b + c + 10.0; r += 0.1) {
+    //     double psi_mc = 2.0 * pow(optimal_alpha, 1.5) * trial_wavefunction(r, optimal_alpha);
+    //     double psi_analytic = (r < b + c) ? A * sin(k_analytic * (r - c)) : B * exp(-alpha_analytic * r);
+    //     outputFile << r << " " << psi_mc << " " << psi_analytic << "\n";
+    // }
+    // outputFile.close();
 
     return 0;
 }
