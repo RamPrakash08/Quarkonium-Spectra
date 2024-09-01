@@ -1,4 +1,3 @@
-// Kandarp Solanki 210260026
 
 #include <iostream>
 #include <cmath>
